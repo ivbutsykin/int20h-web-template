@@ -1,19 +1,13 @@
-import { Box, Stack, Typography } from "@mui/material";
-import int20hLogo from "/int20h-logo.png";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import TodosPage from "./components/pages/TodosPage/TodosPage";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Stack alignItems="center" spacing={2}>
-      <Box
-        alt="INT20H logo"
-        component="img"
-        src={int20hLogo}
-        sx={{ width: 280 }}
-      />
-      <Typography textAlign="center" variant="h1">
-        INT20H
-      </Typography>
-    </Stack>
+    <QueryClientProvider client={queryClient}>
+      <TodosPage />
+    </QueryClientProvider>
   );
 }
 
