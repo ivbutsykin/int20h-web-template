@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { enqueueSnackbar } from "notistack";
 import apiClient from "../../../api/apiClient";
 import { TODOS_URL, TODOS_KEY } from "./constants";
 
@@ -26,6 +27,7 @@ export function useCreateTodo() {
     mutationFn: (data) => createTodo(data),
     onSuccess: () => {
       queryClient.invalidateQueries(TODOS_KEY);
+      enqueueSnackbar("Todo created successfully", { variant: "success" });
     },
   });
 }
