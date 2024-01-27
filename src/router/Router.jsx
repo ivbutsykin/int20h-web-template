@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateTemplate from "../components/templates/PrivateTemplate";
 import HomePage from "../components/pages/HomePage";
 import NotFoundPage from "../components/pages/NotFoundPage";
-import { ROUTE } from "../constants/routes";
+import { ROUTE } from "../constants/router";
 
 function Router() {
   return (
