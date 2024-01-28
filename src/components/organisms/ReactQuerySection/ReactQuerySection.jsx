@@ -1,11 +1,11 @@
-import { CircularProgress, Stack, Typography } from "@mui/material";
+import { CircularProgress, Stack, Box, Typography } from "@mui/material";
 import Section from "../../molecules/Section/Section";
 
 function ReactQuerySection({ data, isLoading }) {
   return (
     <Section title="Effortless data retrieval">
       <Stack alignItems="center">
-        <Stack
+        <Box
           sx={{
             width: {
               xs: "100%",
@@ -21,7 +21,7 @@ function ReactQuerySection({ data, isLoading }) {
           ) : (
             <Typography variant="body1">{JSON.stringify(data)}</Typography>
           )}
-        </Stack>
+        </Box>
       </Stack>
     </Section>
   );

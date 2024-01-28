@@ -3,6 +3,7 @@ import TechnyFramesIllustration from "../../../assets/illustrations/techny-frame
 import ReactQuerySection from "../../organisms/ReactQuerySection/ReactQuerySection";
 import ReactRouterSection from "../../organisms/ReactRouterSection/ReactRouterSection";
 import FormikAndYupSection from "../../organisms/FormikAndYupSection/FormikAndYupSection";
+import ReactErrorBoundarySection from "../../organisms/ReactErrorBoundarySection/ReactErrorBoundarySection";
 
 function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
   return (
@@ -13,12 +14,12 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
             <Box
               component="img"
               sx={{
-                width: {
-                  xs: "50%",
-                  md: "30%",
+                height: {
+                  xs: "160px",
+                  md: "240px",
                 },
               }}
-              alt="Techny Frames With Media Content 1"
+              alt="Techny frames with media content 1"
               src={TechnyFramesIllustration}
             />
             <Stack spacing={2} alignItems="center">
@@ -37,6 +38,8 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
           <ReactRouterSection />
 
           <FormikAndYupSection onSubmit={onUserSubmit} />
+
+          <ReactErrorBoundarySection />
         </Stack>
       </Container>
     </Box>
