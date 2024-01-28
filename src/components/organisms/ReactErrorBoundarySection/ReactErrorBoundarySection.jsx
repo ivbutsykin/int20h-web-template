@@ -14,7 +14,7 @@ function ReactErrorBoundarySection() {
   }, [isError]);
 
   return (
-    <Section title="Graceful Recovery">
+    <Section title="React Error Boundary">
       <Stack alignItems="center">
         <Button variant="contained" color="error" onClick={handleClick}>
           Error

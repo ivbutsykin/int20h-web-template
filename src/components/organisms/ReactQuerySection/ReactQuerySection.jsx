@@ -3,7 +3,7 @@ import Section from "../../molecules/Section/Section";
 
 function ReactQuerySection({ data, isLoading }) {
   return (
-    <Section title="Effortless data retrieval">
+    <Section title="React Query">
       <Stack alignItems="center">
         <Box
           sx={{

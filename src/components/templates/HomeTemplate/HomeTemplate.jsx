@@ -4,6 +4,7 @@ import ReactQuerySection from "../../organisms/ReactQuerySection/ReactQuerySecti
 import ReactRouterSection from "../../organisms/ReactRouterSection/ReactRouterSection";
 import FormikAndYupSection from "../../organisms/FormikAndYupSection/FormikAndYupSection";
 import ReactErrorBoundarySection from "../../organisms/ReactErrorBoundarySection/ReactErrorBoundarySection";
+import MuiPalleteModeSection from "../../organisms/MuiPalleteModeSection/MuiPalleteModeSection";
 
 function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
   return (
@@ -40,6 +41,8 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
           <FormikAndYupSection onSubmit={onUserSubmit} />
 
           <ReactErrorBoundarySection />
+
+          <MuiPalleteModeSection />
         </Stack>
       </Container>
     </Box>

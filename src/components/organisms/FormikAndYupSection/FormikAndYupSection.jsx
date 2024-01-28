@@ -14,7 +14,7 @@ function FormikAndYupSection({ onSubmit }) {
   });
 
   return (
-    <Section title="Form Fortress">
+    <Section title="Formik and Yup">
       <Stack alignItems="center">
         <form onSubmit={formik.handleSubmit}>
           <Stack spacing={2}>

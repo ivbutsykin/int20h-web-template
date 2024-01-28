@@ -4,7 +4,7 @@ import Section from "../../molecules/Section/Section";
 
 function ReactRouterSection() {
   return (
-    <Section title="Smooth Navigation">
+    <Section title="React Router">
       <Stack alignItems="center">
         <Link component={RouterLink} to="/beyond-the-horizon">
           Link
