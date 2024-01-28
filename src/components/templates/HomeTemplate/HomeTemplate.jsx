@@ -1,12 +1,16 @@
 import { Container, Stack, Box, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import TechnyFramesIllustration from "../../../assets/illustrations/techny-frames-with-media-content-1.png";
 import ReactQuerySection from "../../organisms/ReactQuerySection/ReactQuerySection";
 import ReactRouterSection from "../../organisms/ReactRouterSection/ReactRouterSection";
 import FormikAndYupSection from "../../organisms/FormikAndYupSection/FormikAndYupSection";
 import ReactErrorBoundarySection from "../../organisms/ReactErrorBoundarySection/ReactErrorBoundarySection";
 import MuiPalleteModeSection from "../../organisms/MuiPalleteModeSection/MuiPalleteModeSection";
+import I18nSection from "../../organisms/I18nextSection/I18nextSection";
 
 function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
+  const { t } = useTranslation();
+
   return (
     <Box py={8}>
       <Container>
@@ -20,16 +24,15 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
                   md: "240px",
                 },
               }}
-              alt="Techny frames with media content 1"
+              alt={t("template.home.image.technyFrames")}
               src={TechnyFramesIllustration}
             />
             <Stack spacing={2} alignItems="center">
               <Typography variant="h3" component="h1" align="center">
-                Hackathon Hero Toolkit
+                {t("template.home.title")}
               </Typography>
               <Typography variant="subtitle1" align="center">
-                Empowering innovation with a comprehensive codebase for rapid
-                development
+                {t("template.home.subtitle")}
               </Typography>
             </Stack>
           </Stack>
@@ -43,6 +46,8 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
           <ReactErrorBoundarySection />
 
           <MuiPalleteModeSection />
+
+          <I18nSection />
         </Stack>
       </Container>
     </Box>

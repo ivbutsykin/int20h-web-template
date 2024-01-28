@@ -6,10 +6,14 @@ const useClientStore = create(
   persist(
     (set) => ({
       themeMode: "dark",
+      locale: "en",
       toggleThemeMode: () => {
         set((state) => ({
           themeMode: state.themeMode === "dark" ? "light" : "dark",
         }));
+      },
+      setLocale: (locale) => {
+        set({ locale });
       },
     }),
     {

@@ -1,20 +1,23 @@
 import { Button, Stack, TextField } from "@mui/material";
-import { formUserSchema } from "../../../constants/validation";
-import Section from "../../molecules/Section/Section";
 import { useFormik } from "formik";
+import { useTranslation } from "react-i18next";
+import { userValidationSchema } from "../../../constants/validation";
+import Section from "../../molecules/Section/Section";
 
 function FormikAndYupSection({ onSubmit }) {
+  const { t } = useTranslation();
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    validationSchema: formUserSchema,
+    validationSchema: userValidationSchema,
     onSubmit,
   });
 
   return (
-    <Section title="Formik and Yup">
+    <Section title={t("organism.formikAndYupSection.title")}>
       <Stack alignItems="center">
         <form onSubmit={formik.handleSubmit}>
           <Stack spacing={2}>
@@ -22,29 +25,29 @@ function FormikAndYupSection({ onSubmit }) {
               <TextField
                 id="email"
                 name="email"
-                label="Email"
+                label={t("organism.formikAndYupSection.form.email.label")}
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                error={formik.touched.email && Boolean(formik.errors.email)}
-                helperText={formik.touched.email && formik.errors.email}
+                error={formik.touched.email && !!formik.errors.email}
+                helperText={formik.touched.email && t(formik.errors.email)}
               />
               <TextField
                 id="password"
                 name="password"
-                label="Password"
+                label={t("organism.formikAndYupSection.form.password.label")}
                 type="password"
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                error={
-                  formik.touched.password && Boolean(formik.errors.password)
+                error={formik.touched.password && !!formik.errors.password}
+                helperText={
+                  formik.touched.password && t(formik.errors.password)
                 }
-                helperText={formik.touched.password && formik.errors.password}
               />
             </Stack>
             <Button variant="contained" type="submit">
-              Submit
+              {t("organism.formikAndYupSection.form.button.submit")}
             </Button>
           </Stack>
         </form>

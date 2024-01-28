@@ -1,13 +1,12 @@
 import * as yup from "yup";
 
-export const formUserSchema = yup.object({
+export const userValidationSchema = yup.object({
   email: yup
-    .string("Enter your email")
-    .email("Enter a valid email")
-    .required("Email is required"),
-
+    .string("organism.formikAndYupSection.form.email.helperText")
+    .email("organism.formikAndYupSection.form.email.invalidHelperText")
+    .required("organism.formikAndYupSection.form.email.requiredHelperText"),
   password: yup
-    .string("Enter your password")
-    .min(8, "Password should be of minimum 8 characters length")
-    .required("Password is required"),
+    .string("organism.formikAndYupSection.form.password.helperText")
+    .min(8, "organism.formikAndYupSection.form.password.invalidHelperText")
+    .required("organism.formikAndYupSection.form.password.requiredHelperText"),
 });

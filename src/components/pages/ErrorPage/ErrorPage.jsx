@@ -1,8 +1,11 @@
 import { Box } from "@mui/material";
-import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
+import { useTranslation } from "react-i18next";
 import TechnyWarningIllustration from "../../../assets/illustrations/techny-warning-icon.png";
+import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
 
 function ErrorPage({ resetErrorBoundary }) {
+  const { t } = useTranslation();
+
   return (
     <LetteringTemplate
       image={
@@ -14,14 +17,13 @@ function ErrorPage({ resetErrorBoundary }) {
               md: "240px",
             },
           }}
-          alt="Techny warning icon"
+          alt={t("page.error.image.technyWarning")}
           src={TechnyWarningIllustration}
         />
       }
-      title="Uh-Oh! Something Went Wrong"
-      subtitle="We're sorry, but an unexpected error occurred. Our team has been notified, 
-              and we're working to fix it as soon as possible. Please try again later."
-      buttonLabel="Return to Previous Page"
+      title={t("page.error.title")}
+      subtitle={t("page.error.subtitle")}
+      buttonLabel={t("page.error.button.returnToPreviousPage")}
       onButtonClick={resetErrorBoundary}
     />
   );
