@@ -1,6 +1,6 @@
 function createPalette({ mode }) {
   return {
-    mode: mode,
+    mode,
   };
 }
 

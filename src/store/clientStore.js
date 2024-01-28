@@ -1,15 +1,20 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { STORE_NAME } from "../constants/store";
+import { LOCALE } from "../constants/localisation";
+import { THEME_MODE } from "../constants/theme";
 
 const useClientStore = create(
   persist(
     (set) => ({
-      themeMode: "dark",
-      locale: "en",
+      themeMode: THEME_MODE.LIGHT,
+      locale: LOCALE.EN,
       toggleThemeMode: () => {
         set((state) => ({
-          themeMode: state.themeMode === "dark" ? "light" : "dark",
+          themeMode:
+            state.themeMode === THEME_MODE.DARK
+              ? THEME_MODE.LIGHT
+              : THEME_MODE.DARK,
         }));
       },
       setLocale: (locale) => {
@@ -18,7 +23,7 @@ const useClientStore = create(
     }),
     {
       name: STORE_NAME,
-      storage: createJSONStorage(() => sessionStorage),
+      storage: createJSONStorage(() => localStorage),
     }
   )
 );

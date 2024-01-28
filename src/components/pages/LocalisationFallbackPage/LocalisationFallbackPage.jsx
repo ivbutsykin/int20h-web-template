@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import BouncyHourglassIllustration from "../../../assets/illustrations/bouncy-hourglass-and-loading-icon.gif";
 import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
 
-function LoadingPage() {
+function LocalisationFallbackPage() {
   return (
     <LetteringTemplate
       image={
@@ -24,4 +24,4 @@ function LoadingPage() {
   );
 }
 
-export default LoadingPage;
+export default LocalisationFallbackPage;
