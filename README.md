@@ -1,7 +1,8 @@
 <div align="center">
   <a href="https://github.com/ivbutsykin/int20h-web-template">
-    <!-- <img src="images/logo.png" alt="Logo" width="80" height="80"> -->
+    <img width="80" height="80" src="https://img.icons8.com/color/80/template.png" alt="template"/>
   </a>
+
 
 <h3 align="center">Hackathon Hero Toolkit</h3>
 
@@ -12,7 +13,7 @@
 
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+<img width="1156" alt="Screenshot 2024-01-29 at 12 13 44" src="https://github.com/ivbutsykin/int20h-web-template/assets/42767822/c718f88c-e007-494f-8b81-c97b3d1de3b2">
 
 Modern web template with React, Material UI, React Query, React Router, Formik with Yup validation, Zustand for state management, and i18n for internationalization.
 
