@@ -9,7 +9,7 @@ function ReactRouterSection() {
   return (
     <Section title={t("organism.reactRouterSection.title")}>
       <Stack alignItems="center">
-        <Link component={RouterLink} to="/beyond-the-horizon">
+        <Link component={RouterLink} to="/invalid-link">
           {t("organism.reactRouterSection.text.link")}
         </Link>
       </Stack>

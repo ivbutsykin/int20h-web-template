@@ -7,7 +7,7 @@
         "technyLettering": "Techny lettering error 404 with warning sign and wrench text"
       },
       "button": {
-        "backToHome": "Back to Home"
+        "backToMain": "Back to Main Page"
       }
     },
     "error": {
@@ -22,7 +22,7 @@
     }
   },
   "template": {
-    "home": {
+    "entry": {
       "title": "Hackathon Hero Toolkit",
       "subtitle": "Empowering innovation with a comprehensive codebase for rapid development",
       "image": {

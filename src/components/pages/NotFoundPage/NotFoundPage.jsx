@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Box } from "@mui/material";
-import { ROUTE } from "../../../constants/router";
 import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
 import TechnyLetteringIllustration from "../../../assets/illustrations/techny-lettering-error-404-with-warning-sign-and-wrench-text.png";
 
@@ -26,8 +25,8 @@ function NotFoundPage() {
       }
       title={t("page.notFound.title")}
       subtitle={t("page.notFound.subtitle")}
-      buttonLabel={t("page.notFound.button.backToHome")}
-      onButtonClick={() => navigate(ROUTE.HOME)}
+      buttonLabel={t("page.notFound.button.backToMain")}
+      onButtonClick={() => navigate("/")}
     />
   );
 }

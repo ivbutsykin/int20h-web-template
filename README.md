@@ -60,30 +60,30 @@ cd src/constants ; rm validation.js ; cd ../../
 
 2. To remove rest of the example code find and replace code in the following files
 
-- `src/components/templates/HomeTemplate/HomeTemplate.jsx`
+- `src/components/templates/EntryTemplate/EntryTemplate.jsx`
 ```jsx
 import { Box } from "@mui/material";
 
-function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
+function EntryTemplate() {
   return (
     <Box />
   );
 }
 
-export default HomeTemplate;
+export default EntryTemplate;
 ```
 
-- `src/components/pages/HomePage/HomePage.jsx`
+- `src/components/pages/EntryPage/EntryPage.jsx`
 ```jsx
-import HomeTemplate from "../../templates/HomeTemplate/HomeTemplate";
+import EntryTemplate from "../../templates/HomeTemplate/HomeTemplate";
 
-function HomePage() {
+function EntryPage() {
   return (
-    <HomeTemplate />
+    <EntryTemplate />
   );
 }
 
-export default HomePage;
+export default EntryPage;
 ```
 
 - `src/constants/api.js`

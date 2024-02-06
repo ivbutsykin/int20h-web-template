@@ -8,7 +8,7 @@ import ReactErrorBoundarySection from "../../organisms/ReactErrorBoundarySection
 import MuiPalleteModeSection from "../../organisms/MuiPalleteModeSection/MuiPalleteModeSection";
 import I18nSection from "../../organisms/I18nextSection/I18nextSection";
 
-function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
+function EntryTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
   const { t } = useTranslation();
 
   return (
@@ -24,15 +24,15 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
                   md: "240px",
                 },
               }}
-              alt={t("template.home.image.technyFrames")}
+              alt={t("template.entry.image.technyFrames")}
               src={TechnyFramesIllustration}
             />
             <Stack spacing={2} alignItems="center">
               <Typography variant="h3" component="h1" align="center">
-                {t("template.home.title")}
+                {t("template.entry.title")}
               </Typography>
               <Typography variant="subtitle1" align="center">
-                {t("template.home.subtitle")}
+                {t("template.entry.subtitle")}
               </Typography>
             </Stack>
           </Stack>
@@ -54,4 +54,4 @@ function HomeTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
   );
 }
 
-export default HomeTemplate;
+export default EntryTemplate;

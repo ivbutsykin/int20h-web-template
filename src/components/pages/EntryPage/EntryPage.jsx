@@ -1,12 +1,12 @@
 import { enqueueSnackbar } from "notistack";
-import HomeTemplate from "../../templates/HomeTemplate/HomeTemplate";
+import EntryTemplate from "../../templates/EntryTemplate/EntryTemplate";
 import { useGetUsers } from "./api";
 
-function HomePage() {
+function EntryPage() {
   const { data: usersData, isLoading: isGetUsersLoading } = useGetUsers();
 
   return (
-    <HomeTemplate
+    <EntryTemplate
       usersData={usersData}
       isGetUsersLoading={isGetUsersLoading}
       onUserSubmit={handleUserSubmit}
@@ -18,4 +18,4 @@ function HomePage() {
   }
 }
 
-export default HomePage;
+export default EntryPage;
