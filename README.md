@@ -75,7 +75,7 @@ export default EntryTemplate;
 
 - `src/components/pages/EntryPage/EntryPage.jsx`
 ```jsx
-import EntryTemplate from "../../templates/HomeTemplate/HomeTemplate";
+import EntryTemplate from "../../templates/EntryTemplate/EntryTemplate";
 
 function EntryPage() {
   return (
