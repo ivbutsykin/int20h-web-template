@@ -3,7 +3,6 @@
     <img width="80" height="80" src="https://img.icons8.com/color/80/template.png" alt="template"/>
   </a>
 
-
 <h3 align="center">Hackathon Hero Toolkit</h3>
 
   <p align="center">
@@ -28,6 +27,7 @@ Modern web template with React, Material UI, React Query, React Router, Formik w
 ## Prerequisites
 
 - Node.js v20 and later
+
   ```sh
   nvm install 20
   nvm use 20
@@ -52,56 +52,61 @@ Modern web template with React, Material UI, React Query, React Router, Formik w
 ## Usage
 
 1. You can easily remove the example components by using the following commands
+
 ```sh
 cd src/components/molecules/ ; rm -rf * ; touch .gitkeep ; cd ../../../
 cd src/components/organisms/ ; rm -rf * ; touch .gitkeep ; cd ../../../
 cd src/constants ; rm validation.js ; cd ../../
+cd src/assets ; rm -rf * ; touch .gitkeep ; cd ../
 ```
 
-2. To remove rest of the example code find and replace code in the following files
+2. Change the default favicon in the `public` folder with your own, and make sure to update the `index.html` file with the new favicon path and the correct title.
+
+3. To remove rest of the example code find and replace code in the following files
 
 - `src/components/templates/EntryTemplate/EntryTemplate.jsx`
+
 ```jsx
 import { Box } from "@mui/material";
 
 function EntryTemplate() {
-  return (
-    <Box />
-  );
+  return <Box />;
 }
 
 export default EntryTemplate;
 ```
 
 - `src/components/pages/EntryPage/EntryPage.jsx`
+
 ```jsx
 import EntryTemplate from "../../templates/EntryTemplate/EntryTemplate";
 
 function EntryPage() {
-  return (
-    <EntryTemplate />
-  );
+  return <EntryTemplate />;
 }
 
 export default EntryPage;
 ```
 
 - `src/constants/api.js`
+
 ```js
 export const BASE_URL = "";
 ```
 
 - `src/locales/en.json`
+
 ```json
 {}
 ```
 
 - `src/locales/uk.json`
+
 ```json
 {}
 ```
 
-3. Run the development server
+4. Run the development server
    ```sh
    npm run dev
    ```
