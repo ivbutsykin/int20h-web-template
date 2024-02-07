@@ -76,6 +76,18 @@ function EntryTemplate() {
 export default EntryTemplate;
 ```
 
+- `src/components/templates/LetteringTemplate/LetteringTemplate.jsx`
+
+```jsx
+import { Box } from "@mui/material";
+
+function LetteringTemplate() {
+  return <Box />;
+}
+
+export default LetteringTemplate;
+```
+
 - `src/components/pages/EntryPage/EntryPage.jsx`
 
 ```jsx
@@ -86,6 +98,42 @@ function EntryPage() {
 }
 
 export default EntryPage;
+```
+
+- `src/components/pages/NotFoundPage/NotFoundPage.jsx`
+
+```jsx
+import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
+
+function NotFoundPage() {
+  return <LetteringTemplate />;
+}
+
+export default NotFoundPage;
+```
+
+- `src/components/pages/ErrorPage/ErrorPage.jsx`
+
+```jsx
+import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
+
+function ErrorPage() {
+  return <LetteringTemplate />;
+}
+
+export default ErrorPage;
+```
+
+- `src/components/pages/LocalisationFallbackPage/LocalisationFallbackPage.jsx`
+
+```jsx
+import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
+
+function LocalisationFallbackPage() {
+  return <LetteringTemplate />;
+}
+
+export default LocalisationFallbackPage;
 ```
 
 - `src/constants/api.js`
