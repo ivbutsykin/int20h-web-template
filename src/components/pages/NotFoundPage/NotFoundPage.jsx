@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Box } from "@mui/material";
 import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
-import TechnyLetteringIllustration from "../../../assets/illustrations/techny-lettering-error-404-with-warning-sign-and-wrench-text.png";
+import LetteringErrorIllustration from "../../../assets/illustrations/techny-lettering-error-404-with-warning-sign-and-wrench-text.png";
 
 function NotFoundPage() {
   const { t } = useTranslation();
@@ -20,7 +20,7 @@ function NotFoundPage() {
             },
           }}
           alt={t("page.notFound.image.technyLettering")}
-          src={TechnyLetteringIllustration}
+          src={LetteringErrorIllustration}
         />
       }
       title={t("page.notFound.title")}

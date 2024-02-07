@@ -1,6 +1,6 @@
 import { Container, Stack, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import TechnyFramesIllustration from "../../../assets/illustrations/techny-frames-with-media-content-1.png";
+import FramesWithMediaContentIllustration from "../../../assets/illustrations/techny-frames-with-media-content-1.png";
 import ReactQuerySection from "../../organisms/ReactQuerySection/ReactQuerySection";
 import ReactRouterSection from "../../organisms/ReactRouterSection/ReactRouterSection";
 import FormikAndYupSection from "../../organisms/FormikAndYupSection/FormikAndYupSection";
@@ -25,7 +25,7 @@ function EntryTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
                 },
               }}
               alt={t("template.entry.image.technyFrames")}
-              src={TechnyFramesIllustration}
+              src={FramesWithMediaContentIllustration}
             />
             <Stack spacing={2} alignItems="center">
               <Typography variant="h3" component="h1" align="center">

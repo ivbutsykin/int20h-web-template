@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import TechnyWarningIllustration from "../../../assets/illustrations/techny-warning-icon.png";
+import WarningIllustration from "../../../assets/illustrations/techny-warning-icon.png";
 import LetteringTemplate from "../../templates/LetteringTemplate/LetteringTemplate";
 
 function ErrorPage({ resetErrorBoundary }) {
@@ -18,7 +18,7 @@ function ErrorPage({ resetErrorBoundary }) {
             },
           }}
           alt={t("page.error.image.technyWarning")}
-          src={TechnyWarningIllustration}
+          src={WarningIllustration}
         />
       }
       title={t("page.error.title")}
