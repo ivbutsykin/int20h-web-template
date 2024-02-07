@@ -107,6 +107,9 @@ export const BASE_URL = "";
 ```
 
 4. Run the development server
+
    ```sh
    npm run dev
    ```
+
+5. Remove `README.md` or replace it with your own
