@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import apiClient from "../../../api/apiClient";
-import { USERS_KEY, USERS_URL } from "./constants";
+import apiClient from "./apiClient";
+import { USERS_KEY, USERS_URL } from "../constants/users";
 
 async function getUsers() {
   const res = await apiClient.get(USERS_URL, {

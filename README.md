@@ -56,8 +56,10 @@ Modern web template with React, Material UI, React Query, React Router, Formik w
 ```sh
 cd src/components/molecules/ ; rm -rf * ; touch .gitkeep ; cd ../../../
 cd src/components/organisms/ ; rm -rf * ; touch .gitkeep ; cd ../../../
-cd src/constants ; rm validation.js ; cd ../../
-cd src/assets ; rm -rf * ; touch .gitkeep ; cd ../
+cd src/components/pages/EntryPage ; rm api.js constants.js ; cd ../../../../
+cd src/constants ; rm validation.js users.js; cd ../../
+cd src/api ; rm users.js ; cd ../../
+cd src/assets ; rm -rf * ; touch .gitkeep ; cd ../../
 ```
 
 2. Change the default favicon in the `public` folder with your own, and make sure to update the `index.html` file with the new favicon path and the correct title.

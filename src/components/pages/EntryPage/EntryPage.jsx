@@ -1,6 +1,6 @@
 import { enqueueSnackbar } from "notistack";
+import { useGetUsers } from "../../../api/users";
 import EntryTemplate from "../../templates/EntryTemplate/EntryTemplate";
-import { useGetUsers } from "./api";
 
 function EntryPage() {
   const { data: usersData, isLoading: isGetUsersLoading } = useGetUsers();
