@@ -8,7 +8,7 @@ const useClientStore = create(
   persist(
     (set) => ({
       themeMode: THEME_MODE.LIGHT,
-      locale: LOCALE.EN,
+      locale: LOCALE.UK,
       toggleThemeMode: () => {
         set((state) => ({
           themeMode:

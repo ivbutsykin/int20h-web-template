@@ -8,7 +8,7 @@ import ReactErrorBoundarySection from "../../organisms/ReactErrorBoundarySection
 import MuiPalleteModeSection from "../../organisms/MuiPalleteModeSection/MuiPalleteModeSection";
 import I18nSection from "../../organisms/I18nextSection/I18nextSection";
 
-function EntryTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
+function EntryTemplate() {
   const { t } = useTranslation();
 
   return (
@@ -37,11 +37,11 @@ function EntryTemplate({ usersData, isGetUsersLoading, onUserSubmit }) {
             </Stack>
           </Stack>
 
-          <ReactQuerySection data={usersData} isLoading={isGetUsersLoading} />
+          <ReactQuerySection />
 
           <ReactRouterSection />
 
-          <FormikAndYupSection onSubmit={onUserSubmit} />
+          <FormikAndYupSection />
 
           <ReactErrorBoundarySection />
 

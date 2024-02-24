@@ -1,9 +1,12 @@
 import { CircularProgress, Stack, Box, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { useGetUsers } from "../../../api/users";
 import Section from "../../molecules/Section/Section";
 
-function ReactQuerySection({ data, isLoading }) {
+function ReactQuerySection() {
   const { t } = useTranslation();
+
+  const { data: usersData, isLoading: isGetUsersLoading } = useGetUsers();
 
   return (
     <Section title={t("organism.reactQuerySection.title")}>
@@ -17,12 +20,12 @@ function ReactQuerySection({ data, isLoading }) {
             overflow: "hidden",
           }}
         >
-          {isLoading || !data ? (
+          {isGetUsersLoading || !usersData ? (
             <Stack alignItems="center">
               <CircularProgress />
             </Stack>
           ) : (
-            <Typography variant="body1">{JSON.stringify(data)}</Typography>
+            <Typography variant="body1">{JSON.stringify(usersData)}</Typography>
           )}
         </Box>
       </Stack>

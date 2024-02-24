@@ -1,10 +1,11 @@
 import { Button, Stack, TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
+import { enqueueSnackbar } from "notistack";
 import { userValidationSchema } from "../../../constants/validation";
 import Section from "../../molecules/Section/Section";
 
-function FormikAndYupSection({ onSubmit }) {
+function FormikAndYupSection() {
   const { t } = useTranslation();
 
   const formik = useFormik({
@@ -13,7 +14,7 @@ function FormikAndYupSection({ onSubmit }) {
       password: "",
     },
     validationSchema: userValidationSchema,
-    onSubmit,
+    onSubmit: handleSubmit,
   });
 
   return (
@@ -54,6 +55,10 @@ function FormikAndYupSection({ onSubmit }) {
       </Stack>
     </Section>
   );
+
+  function handleSubmit(values) {
+    enqueueSnackbar(JSON.stringify(values));
+  }
 }
 
 export default FormikAndYupSection;
