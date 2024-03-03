@@ -56,7 +56,7 @@ Modern web template with React, Material UI, React Query, React Router, Formik w
 ```sh
 cd src/components/molecules/ ; rm -rf * ; touch .gitkeep ; cd ../../../
 cd src/components/organisms/ ; rm -rf * ; touch .gitkeep ; cd ../../../
-cd src/components/pages/EntryPage ; rm api.js constants.js ; cd ../../../../
+cd src/components/pages/EntryPage ; cd ../../../../
 cd src/constants ; rm validation.js users.js; cd ../../
 cd src/api ; rm users.js ; cd ../../
 cd src/assets ; rm -rf * ; touch .gitkeep ; cd ../../
@@ -88,18 +88,6 @@ function LetteringTemplate() {
 }
 
 export default LetteringTemplate;
-```
-
-- `src/components/pages/EntryPage/EntryPage.jsx`
-
-```jsx
-import EntryTemplate from "../../templates/EntryTemplate/EntryTemplate";
-
-function EntryPage() {
-  return <EntryTemplate />;
-}
-
-export default EntryPage;
 ```
 
 - `src/components/pages/NotFoundPage/NotFoundPage.jsx`
